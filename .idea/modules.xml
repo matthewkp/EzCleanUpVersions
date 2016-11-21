@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../EzCleanUpVersions/.idea/ez-clean-up-versions.iml" filepath="$PROJECT_DIR$/../EzCleanUpVersions/.idea/ez-clean-up-versions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ez-clean-up-versions.iml" filepath="$PROJECT_DIR$/.idea/ez-clean-up-versions.iml" />
     </modules>
   </component>
 </project>

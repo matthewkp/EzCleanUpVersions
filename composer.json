@@ -1,5 +1,5 @@
 {
-    "name" : "matthewkp/EzCleanUpVersions",
+    "name" : "matthewkp/ez-clean-up-versions",
     "description" : "This tools clean ups all versions from all content in eZ Platform",
     "keywords" : ["ezpublish", "ezplatform", "versions"],
     "authors": [
