@@ -8,9 +8,9 @@ composer require matthewkp/ez-clean-up-versions "~0.1"
 ```
 ## Register Bundle
 ```php
-// ezpublish/EzPublishKernel.php
+// app/AppKernel.php
 
-class EzPublishKernel extends Kernel
+class AppKernel extends Kernel
 {
     ...
     public function registerBundles()
