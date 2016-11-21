@@ -1,4 +1,4 @@
-.idea/**
+.idea/
 /.idea/
 /vendor/
 .php_cs.cache

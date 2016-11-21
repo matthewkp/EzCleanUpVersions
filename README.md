@@ -4,7 +4,7 @@ This script will remove old versions of all contents for eZ Platform.
 Currently tested on eZ Platform v1.6.
 ## Install Package
 ```bash
-composer require matthewkp/EzCleanUpVersions "~0.1"
+composer require matthewkp/ez-clean-up-versions "~0.1"
 ```
 ## Register Bundle
 ```php
