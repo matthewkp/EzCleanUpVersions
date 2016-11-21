@@ -1,0 +1,16 @@
+{
+    "name" : "matthewkp/ez-clean-up-versions",
+    "description" : "This tools clean ups all versions from all content in eZ Platform",
+    "keywords" : ["ezpublish", "ezplatform", "versions"],
+    "authors": [
+        {
+            "name": "Matthieu Kapetanos"
+        }
+    ],
+    "license" : "MIT",
+    "type": "ezplatform-bundle",
+    "minimum-stability": "dev",
+    "require" : {
+        "ezsystems/ezpublish-kernel": "^6.0"
+    }
+}
