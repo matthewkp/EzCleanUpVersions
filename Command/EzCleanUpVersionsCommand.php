@@ -70,7 +70,7 @@ class EzCleanUpVersionsCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('dailykiosk:ez-clear-up-versions')
+            ->setName('matthewkp:ez-clear-up-versions')
             ->setDescription('This script will removed old versions of all contents');
     }
 

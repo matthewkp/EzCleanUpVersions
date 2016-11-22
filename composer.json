@@ -8,9 +8,12 @@
             "name": "Matthieu Kapetanos"
         }
     ],
-    "license" : "MIT",
+    "license": "GPL-2.0",
     "type": "ezplatform-bundle",
     "require" : {
         "ezsystems/ezpublish-kernel": "^6.0"
+    },
+    "autoload": {
+        "psr-4": { "Matthewkp\\EzCleanUpBundle\\": "" }
     }
 }
