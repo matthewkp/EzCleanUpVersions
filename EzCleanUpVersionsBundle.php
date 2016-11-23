@@ -1,6 +1,6 @@
 <?php
 
-namespace EzCleanUpVersionsBundle;
+namespace Matthewkp\EzCleanUpVersionsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
