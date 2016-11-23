@@ -4,6 +4,6 @@ namespace Matthewkp\EzCleanUpVersionsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class EzCleanUpVersionsBundle extends Bundle
+class MatthewkpEzCleanUpVersionsBundle extends Bundle
 {
 }
