@@ -1,7 +1,7 @@
 # eZ Clean Up Versions Script
 This script will remove old versions of all contents for eZ Platform.
 
-Currently tested on eZ Platform v1.6.
+Work on eZ Platform version > 1.6 as it uses the new PermissionResolver service introduced on ezpublish-kernel v6.6.
 ## Install Package
 ```bash
 composer require matthewkp/ez-clean-up-versions
@@ -18,7 +18,7 @@ class AppKernel extends Kernel
         ...
         $bundles = array(
             ...
-            new Matthewkp\EzCleanUpVersionsBundle()
+            new Matthewkp\EzCleanUpVersionsBundle(),
             ...
         );
         ...
