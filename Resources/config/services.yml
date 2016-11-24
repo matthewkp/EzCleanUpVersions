@@ -1,9 +1,6 @@
-parameters:
-    matthewkp.command.clean_up_versions.class: EzCleanUpVersionsBundle\Command\EzCleanUpVersionsCommand
-
 services:
     matthewkp.command.clean_up_versions:
-        class: %matthewkp.command.clean_up_versions.class%
+        class: Matthewkp\EzCleanUpVersionsBundle\Command\EzCleanUpVersionsCommand
         arguments:
             - "@ezpublish.api.repository"
             - "@ezpublish.api.service.location"
