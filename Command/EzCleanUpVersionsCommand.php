@@ -1,6 +1,6 @@
 <?php
 
-namespace EzCleanUpVersionsBundle\Command;
+namespace Matthewkp\EzCleanUpVersionsBundle\Command;
 
 use eZ\Publish\API\Repository\Repository;
 use eZ\Publish\API\Repository\ContentService;
