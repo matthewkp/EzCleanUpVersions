@@ -1,0 +1,20 @@
+{
+    "name" : "matthewkp/ez-clean-up-versions",
+    "description" : "This tools clean ups all versions from all content in eZ Platform",
+    "keywords" : ["ezpublish", "ezplatform", "versions"],
+    "homepage" : "https://github.com/matthewkp/ez-clean-up-versions",
+    "authors": [
+        {
+            "name": "Matthieu Kapetanos"
+        }
+    ],
+    "license": "GPL-2.0",
+    "type": "ezplatform-bundle",
+    "require" : {
+        "ezsystems/ezpublish-kernel": "^6.6"
+    },
+    "autoload": {
+        "psr-4": { "Matthewkp\\EzCleanUpVersionsBundle\\": "" }
+    },
+    "minimum-stability": "dev"
+}

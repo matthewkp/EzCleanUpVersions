@@ -1,0 +1,7 @@
+parameters:
+    # 2 is default top node on every eZ Platform installation
+    rootLocationId: 2
+    # 14 is default user Id on every eZ Platform installation
+    adminId: 14
+    # Number of versions to keep when cleaning up
+    numberOfVersionsToKeep: 10

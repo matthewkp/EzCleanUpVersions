@@ -1,0 +1,14 @@
+services:
+    matthewkp.command.clean_up_versions:
+        class: Matthewkp\EzCleanUpVersionsBundle\Command\EzCleanUpVersionsCommand
+        arguments:
+            - "@ezpublish.api.repository"
+            - "@ezpublish.api.service.location"
+            - "@ezpublish.api.service.content"
+            - "@ezpublish.api.service.search"
+            - "@ezpublish.api.service.user"
+            - %rootLocationId%
+            - %adminId%
+            - %numberOfVersionsToKeep%
+        tags:
+            -  { name: console.command }
