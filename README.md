@@ -32,4 +32,4 @@ class AppKernel extends Kernel
 ```
 
 ## Configure
-Edit Resources/config/settings.yml as you wish
+Edit Resources/config/default_settings.yml as you wish 
