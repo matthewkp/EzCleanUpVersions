@@ -70,7 +70,7 @@ class EzCleanUpVersionsCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('ez-clean-up-versions:run')
+            ->setName('matthewkp:ez-clean-up-versions')
             ->setDescription('This script will remove old versions of all contents');
     }
 

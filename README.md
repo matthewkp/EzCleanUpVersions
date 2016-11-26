@@ -28,7 +28,7 @@ class AppKernel extends Kernel
 ## Add in crontab
 ```php
 // /etc/cron.d/<your_cron_file>
-0 0 * * * <user> cd <your_site_path> && php app/console matthewkp:ez-clear-up-versions --env=<ENV> > 2>&1
+0 0 * * * <user> cd <your_site_path> && php app/console matthewkp:ez-clean-up-versions --env=<ENV> > 2>&1
 ```
 
 ## Configure
