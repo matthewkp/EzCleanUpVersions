@@ -11,6 +11,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use eZ\Publish\API\Repository\Values\Content\Location;
+use Symfony\Bridge\Monolog\Logger;
 
 class EzCleanUpVersionsCommand extends Command
 {
@@ -29,8 +30,8 @@ class EzCleanUpVersionsCommand extends Command
     /** @var \eZ\Publish\API\Repository\UserService */
     protected $userService;
 
-    /** @var \DailykioskBundle\Helper\ImportHelper */
-    protected $importHelper;
+    /** @var \Symfony\Bridge\Monolog\Logger */
+    protected $logger;
 
     /** @var int */
     protected $rootLocationId;
@@ -47,6 +48,7 @@ class EzCleanUpVersionsCommand extends Command
         ContentService $contentService,
         SearchService $searchService,
         UserService $userService,
+        Logger $logger,
         $rootLocationId,
         $adminId,
         $numberOfVersionsToKeep
@@ -57,6 +59,7 @@ class EzCleanUpVersionsCommand extends Command
         $this->contentService = $contentService;
         $this->searchService = $searchService;
         $this->userService = $userService;
+        $this->logger = $logger;
         $this->rootLocationId = $rootLocationId;
         $this->adminId = $adminId;
         $this->numberOfVersionsToKeep = $numberOfVersionsToKeep;
@@ -107,11 +110,15 @@ class EzCleanUpVersionsCommand extends Command
         $contentVersions = $this->contentService->loadVersions($content->contentInfo);
         $versionsToRemove = count($contentVersions) - $this->numberOfVersionsToKeep;
 
-        if ($versionsToRemove > 0) {
+        if ($versionsToRemove > $this->numberOfVersionsToKeep) {
             $i = 0;
             foreach ($contentVersions as $contentVersion) {
                 if ($i < $versionsToRemove) {
-                    $this->contentService->deleteVersion($contentVersion);
+                    try {
+                        $this->contentService->deleteVersion($contentVersion);
+                    } catch (\Exception $e) {
+                        $this->logger->error('Exception threw for content Id ' .  $contentId . '. Message : ' . $e->getMessage());
+                    }
                 }
                 $i++;
             }

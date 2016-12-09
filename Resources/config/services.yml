@@ -7,6 +7,7 @@ services:
             - "@ezpublish.api.service.content"
             - "@ezpublish.api.service.search"
             - "@ezpublish.api.service.user"
+            - "@logger"
             - %rootLocationId%
             - %adminId%
             - %numberOfVersionsToKeep%
