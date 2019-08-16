@@ -4,8 +4,8 @@ This script will remove old versions of all contents for eZ Platform.
 Works on eZ Platform version > 1.6 as it uses the new PermissionResolver service introduced in ezpublish-kernel v6.6.
 
 ## versions
-Branch v1 & Tags 0.1.x : eZ Platform v1.x
-Branch v2 & Tags 0.2.x : eZ Platform v2.x
+Branch v1 & Tags 1.x : eZ Platform v1.x
+Branch v2 & Tags 2.x : eZ Platform v2.x
 
 ## Install Package
 ```bash
