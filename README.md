@@ -5,7 +5,8 @@ Works on eZ Platform version > 1.6 as it uses the new PermissionResolver service
 
 ## versions
 Branch v1 & Tags 1.x : eZ Platform v1.x
-Branch v2 & Tags 2.x : eZ Platform v2.x
+
+Branch v2 & Tags 2.x : eZ Platform v2.x (Currently testing)
 
 ## Install Package
 ```bash
