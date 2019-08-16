@@ -2,6 +2,11 @@
 This script will remove old versions of all contents for eZ Platform.
 
 Works on eZ Platform version > 1.6 as it uses the new PermissionResolver service introduced in ezpublish-kernel v6.6.
+
+## versions
+Branch v1 & Tags 0.1.x : eZ Platform v1.x
+Branch v2 & Tags 0.2.x : eZ Platform v2.x
+
 ## Install Package
 ```bash
 composer require matthewkp/ez-clean-up-versions
@@ -32,4 +37,4 @@ class AppKernel extends Kernel
 ```
 
 ## Configure
-Edit Resources/config/default_settings.yml as you wish 
+Edit Resources/config/default_settings.yml as you wish
