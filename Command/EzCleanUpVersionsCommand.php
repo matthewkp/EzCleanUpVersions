@@ -135,10 +135,14 @@ class EzCleanUpVersionsCommand extends Command
 
         $versionsToRemove = count($contentVersions) - $this->numberOfVersionsToKeep;
         if ($output->isVerbose()) {
-            $output->writeln($versionsToRemove . ' versions will be removed.');
+            if ($versionsToRemove > 0) {
+                $output->writeln($versionsToRemove . ' version(s) will be removed.');
+            } else {
+                $output->writeln('No versions to remove.');
+            }
         }
 
-        if ($versionsToRemove) {
+        if ($versionsToRemove > 0) {
             $i = 0;
             foreach ($contentVersions as $contentVersion) {
                 if ($i < $versionsToRemove) {
