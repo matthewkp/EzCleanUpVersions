@@ -4,30 +4,14 @@ This script will remove old versions of all contents for eZ Platform.
 ## versions
 * Branch v1 & Tags 1.x : eZ Platform v1.x
 * Branch v2 & Tags 2.x : eZ Platform v2.x
+* Branch v3 & Tags 3.x : eZ Platform v3.x (in beta)
 
 ## Install Package
 ```bash
 composer require matthewkp/ez-clean-up-versions
 ```
 ## Register Bundle
-```php
-// app/AppKernel.php
-
-class AppKernel extends Kernel
-{
-    ...
-    public function registerBundles()
-    {
-        ...
-        $bundles = [
-            ...
-            new Matthewkp\EzCleanUpVersionsBundle\MatthewkpEzCleanUpVersionsBundle(),
-            ...
-        ];
-        ...
-    }
-}
-```
+No manual registration is required
 
 ## Arguments
 * Add -v to have the full information regarding content and version ids removals.
