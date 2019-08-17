@@ -1,8 +1,6 @@
 # eZ Clean Up Versions Script
 This script will remove old versions of all contents for eZ Platform.
 
-Works on eZ Platform version > 1.6 as it uses the new PermissionResolver service introduced in ezpublish-kernel v6.6.
-
 ## versions
 Branch v1 & Tags 1.x : eZ Platform v1.x
 
@@ -22,20 +20,22 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         ...
-        $bundles = array(
+        $bundles = [
             ...
             new Matthewkp\EzCleanUpVersionsBundle\MatthewkpEzCleanUpVersionsBundle(),
             ...
-        );
+        ];
         ...
     }
 }
 ```
 ## Add in crontab
 ```php
-// /etc/cron.d/<your_cron_file>
+// /etc/cron.d/<your_cron_file> or /var/spool/cron/apache
 0 0 * * * <user> cd <your_site_path> && php app/console matthewkp:ez-clean-up-versions --env=<ENV> > 2>&1
 ```
 
-## Configure
-Edit Resources/config/default_settings.yml as you wish
+## Arguments
+Add -v to have the full information regarding content and version ids removals.
+Add --keep to set the number of versions to keep
+Add --locationId to set the root location id to start processing
