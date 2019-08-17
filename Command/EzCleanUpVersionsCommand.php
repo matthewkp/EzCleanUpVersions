@@ -119,9 +119,10 @@ class EzCleanUpVersionsCommand extends Command
     }
 
     /**
-     * Clean ups versions for a content Id given
+     * Clean ups versions for a given content Id
      *
-     * @param $contentId
+     * @param string $contentId
+     * @param OutputInterface $output
      */
     private function cleanUpVersions($contentId, $output)
     {
@@ -162,6 +163,7 @@ class EzCleanUpVersionsCommand extends Command
      *
      * @param Location $location
      * @param int $depth
+     * @param OutputInterface $output
      */
     private function browseLocation(Location $location, $depth = 0, $output)
     {
